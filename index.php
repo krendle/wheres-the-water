@@ -4,7 +4,7 @@ heading();
 
 <ul>
 <li><a href="wheres-the-water.php">Map View</a></li>
-<li><a href="table-view.php">Simple Table View</a></li>
+<li><a href="/wtw">List View</a></li>
 </ul>
 
 <?php

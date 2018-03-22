@@ -10,6 +10,8 @@
    This is only for use by GrabSepaRivers when doing the bulk download, too slow and resource intensive to do it more often
 */
 
+require_once 'SepaRiverReadingHistory.php';
+
 class GrabSepaRiverReading {
     const DATADIR = 'data';
     const SEPA_DOWNLOAD_PERIOD = 300; // 60 * 5; // make sure current download is no older than 5 minutes
@@ -76,6 +78,12 @@ class GrabSepaRiverReading {
         }
         print "<p>Downloaded River Reading for gauge ".$gauge_id."</p>\n";
         flush();
+        // save it to history
+        $history = new SepaRiverReadingHistory($gauge_id);
+        $time_explode = explode('/', $this->currentReadingTime); // need to swap date and month cos PHP likes US date format
+        $ustime = $time_explode[1] . '/' . $time_explode[0] . '/' . $time_explode[2];
+        $timestamp = strtotime($ustime);
+        $history->newReading($timestamp, $this->currentReading);
     }
 
     private function validateRiverData($riverData) {

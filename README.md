@@ -65,3 +65,15 @@ Config
 config.php should have the root file location set:
  <?php
  define("ROOT",     "/var/www/canoescotland.org/wheres-the-water");
+ 
+ Setup
+ ======
+ Edit config.php to have the correct server path eg. "/var/www/wheres-the-water"
+ 
+ Make sure your webserver has permission to write to the data folder
+ Debian: sudo chown -R www-data.www-data data/
+ 
+ Run the admin/download-river-readings.php script once
+ 'Unable to open file' will be displayed if the above steps have not been performed correctly
+ 
+ 

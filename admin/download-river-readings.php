@@ -1,5 +1,4 @@
 <?php
-
 require_once('../lib/RiverSections.php');
 require_once('../lib/GrabSepaRivers.php');
 require_once('../config.php');
@@ -11,6 +10,8 @@ require_once('../config.php');
 <body>
 
 <h1>Download SEPA River Readings</h1>
+<p><a href="index.html">&#8592; back to admin index</a></p>
+
 <?php
 if (array_key_exists('download', $_GET)) {
     print "\n<h1>Downloading SEPA River Readings...</h1>\n";

@@ -4,6 +4,7 @@ data/river-sections.json
 data/rivers-readings.json
 data/rivers_download_timestamp
 data/*.csv
+data/history*
 config/database.php
 tests/data/rivers_download_timestamp
 tests/data/10048-SG.csv
@@ -13,3 +14,7 @@ tests/data/133094-SG.csv
 config.php
 admin/htpasswd
 data/download_reading_timestamp
+.buildpath
+.project
+.settings/org.eclipse.php.core.prefs
+.settings/org.eclipse.wst.common.project.facet.core.xml
